@@ -31,6 +31,10 @@ app.get('/users/add', function (req, res) {
   res.render('add_users');
 })
 
+app.get('/tasks/add', function (req, res) {
+  res.render('add_tasks');
+})
+
 app.listen(3000, function() {
     console.log("Server is upon port 3000");
 })

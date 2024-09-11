@@ -36,3 +36,12 @@ button {
   margin-left: 15px;
   font-weight: bolder;
 }
+
+i {
+  font-size: 30px !important;
+  float: right;
+}
+
+th:first-child {
+  width: 20px;
+}

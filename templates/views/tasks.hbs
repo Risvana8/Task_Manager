@@ -2,13 +2,19 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/js/jquery-3.7.1.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/tasks.js"></script>
     <link rel="stylesheet" href="css/tasks.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
 
     <h2>TASKS</h2>
+    <i class="fa fa-power-off" aria-hidden="true"></i>
     <div class="menu">
         <a href="/users">Users</a>
         <a href="/tasks">Tasks</a>
@@ -16,28 +22,32 @@
 
     <div class="btn">
         <button>ADD</button>
-        <button>EDIT</button>
-        <button>DELETE</button>
+        <button id="editBtn">EDIT</button>
+        <button id="deleteBtn">DELETE</button>
     </div>
 
 
     <table>
         <tr>
+            <th></th>
             <th>Task</th>
             <th>Username</th>
             <th>Status</th>
         </tr>
         <tr>
+            <td><input type="checkbox" class="checkbox"></td>
             <td>Reading</td>
             <td>Ram</td>
             <td>Incompleted</td>
         </tr>
         <tr>
+            <td><input type="checkbox" class="checkbox"></td>
             <td>Writing</td>
             <td>Sham</td>
             <td>Completed</td>
         </tr>
         <tr>
+            <td><input type="checkbox" class="checkbox"></td>
             <td>Teaching</td>
             <td>Priya</td>
             <td>Completed</td>

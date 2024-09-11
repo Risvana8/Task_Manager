@@ -1,30 +1,26 @@
 $(document).ready(function() {
-    $("#addBtn").click(function() {
-        window.open("/users/add");
-    })
-
     $("#editBtn").click(function() {
         let count = $(":checkbox:checked").length;
 
-        if(count != 1) {
-            alert("Please select one checkbox.");
+        if (count != 1) {
+            alert("Please select one checkbox");
             return;
-        } 
-        alert("Edited");
+        }
+        alert("edited");
     })
 
     $("#deleteBtn").click(function() {
         let count = $(":checkbox:checked").length;
 
-        if(count == 0) {
-            alert("Please select atleast one checkbox.");
+        if (count == 0) {
+            alert("Please select atleast one checkbox");
             return;
         }
 
         let result = confirm("Are you sure you want to delete");
-        console.log(result);
+
         if (!result) {
-            alert("Not Deleted");
+            alert("Not deleted");
             return;
         }
         alert("Deleted");

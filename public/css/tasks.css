@@ -36,3 +36,7 @@ button {
     margin-left: 15px;
     font-weight: bolder;
 }
+
+th:first-child {
+    width: 20px;
+}
