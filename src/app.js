@@ -80,8 +80,12 @@ app.get('/tasks', function (req, res) {
 	    discription,
 	    name AS user_name,
       CASE 
-        WHEN is_completed = true THEN 'Complete'
-        ELSE 'Incomplete'
+        WHEN 
+          is_completed = true 
+        THEN 
+          'Complete'
+        ELSE 
+          'Incomplete'
       END AS status
     FROM
       tasks
@@ -107,9 +111,20 @@ app.get('/users/add', function (req, res) {
 })
 
 app.get('/tasks/add', function (req, res) {
-  res.render('add_tasks', {
-    title: "ADD TASKS"
-  });
+  let sql = `
+    SELECT 
+      name,
+      id
+    FROM
+      users
+  `;
+  client.query(sql, function(err, result) {
+    console.log(result.rows);
+    res.render('add_tasks', {
+      title: "ADD TASKS",
+      users_name: result.rows
+    })
+  })
 })
 
 app.listen(4000, function() {

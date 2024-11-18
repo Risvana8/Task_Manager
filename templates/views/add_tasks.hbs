@@ -14,13 +14,13 @@
             <button id="backBtn">Back</button>
         </div>
 
-        <form id="userForm">
+        <form id="taskForm">
             <div class="row">
                 <div class="col-2">
                     <label>Title</label>
                 </div>
                 <div class="col-sm">
-                    <input type="text" required>
+                    <input type="text" id="title" required>
                 </div>
             </div>
             <div class="row">
@@ -28,7 +28,7 @@
                     <label>Description</label>
                 </div>
                 <div class="col-sm">
-                    <textarea></textarea>
+                    <textarea id="discrip"></textarea>
                 </div>
             </div>
             <div class="row">
@@ -36,10 +36,10 @@
                     <label>Users</label>
                 </div>
                 <div class="col-sm">
-                    <select>
-                        <option value="ram">Ram</option>
-                        <option value="sham">Sham</option>
-                        <option value="priya">Priya</option>
+                    <select id="userId">
+                        {{#each users_name}}
+                            <option value="{{this.id}}">{{this.name}}</option>
+                        {{/each}}
                     </select>
                 </div>
             </div>
@@ -49,9 +49,9 @@
                     <label>Status</label>
                 </div>
                 <div class="col-sm">
-                    <select>
-                        <option value="comp">Completed</option>
-                        <option value="incomp">Incompleted</option>
+                    <select id="status">
+                        <option value="true">Completed</option>
+                        <option value="false">Incompleted</option>
                     </select>
                 </div>
             </div>
