@@ -25,4 +25,10 @@ $(document).ready(function() {
         }
         alert("Deleted");
     })
+
+    $("#addBtn").click(function () {
+        location.href = '/tasks/add';
+    })
+
+
 })

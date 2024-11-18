@@ -13,7 +13,7 @@
 
 <body>
 
-    <h2>USERS</h2>
+    <h2>{{title}}</h2>
     <i class="fa fa-power-off" aria-hidden="true"></i>
     <div class="menu">
         <a href="/users">Users</a>
@@ -33,24 +33,14 @@
             <th>Email</th>
             <th>Password</th>
         </tr>
-        <tr>
-            <td><input type="checkbox" class="checkbox"></td>
-            <td>Ram</td>
-            <td>ramkumar@gmail.com</td>
-            <td>Ram@123</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" class="checkbox"></td>
-            <td>Sham</td>
-            <td>sham@gmail.com</td>
-            <td>Sham@123</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" class="checkbox"></td>
-            <td>Priya</td>
-            <td>priyaraj@gmail.com</td>
-            <td>Priya@123</td>
-        </tr>
+        {{#each users}}
+            <tr>
+                <td><input type="checkbox" class="checkbox"></td>
+                <td>{{this.name}}</td>
+                <td>{{this.email_id}}</td>
+                <td>{{this.password}}</td>
+            </tr>
+        {{/each}}
     </table>
 
 </body>

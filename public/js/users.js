@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#addBtn").click(function() {
-        window.open("/users/add");
+        location.href = '/users/add';
     })
 
     $("#editBtn").click(function() {

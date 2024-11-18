@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h2>ADD TASKS</h2>
+    <h2>{{title}}</h2>
     <div class="container">
         <div class="row btn">
             <button id="backBtn">Back</button>
@@ -17,13 +17,20 @@
         <form id="userForm">
             <div class="row">
                 <div class="col-2">
-                    <label>Tasks</label>
+                    <label>Title</label>
                 </div>
                 <div class="col-sm">
                     <input type="text" required>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-2">
+                    <label>Description</label>
+                </div>
+                <div class="col-sm">
+                    <textarea></textarea>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-2">
                     <label>Users</label>
